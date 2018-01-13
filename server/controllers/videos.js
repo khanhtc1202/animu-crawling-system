@@ -1,18 +1,19 @@
-var config = require('../config');
-var fs = require('fs');
-
-var videos = {
-    list : function(req, res, next) {
+module.exports = function(utils) {
+    var config = require('../config');
+    var fs = require('fs');
+    var obj = {};
+    
+    obj.list = function(req, res, next) {
         var mediaFiles = [];
         fs.readdirSync(config.app.mediaPath).forEach(function(file) {
             mediaFiles[mediaFiles.length] = {
                 "name": file,
-                "path": config.app.mediaPath + '/' + file
+                "url": utils.createUrl('video', file)
             };
             console.log("Loaded file " + file + " ready to view!");
         });
-        res.render('videos', {'data':mediaFiles});
-    }
+        res.render('videos', { 'data': mediaFiles });
+    };
+    
+    return obj;
 };
-
-module.exports = videos;

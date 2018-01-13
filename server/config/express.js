@@ -11,4 +11,4 @@ module.exports = function(app, config) {
     app.set('views', config.root+'/views');
     app.set('view engine', 'html');
 
-}
+};

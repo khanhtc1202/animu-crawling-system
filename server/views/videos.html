@@ -3,14 +3,41 @@
 
 <head>
     <title>Videos</title>
+    <style type="text/css">
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 15px;
+        }
+        th {
+            text-align: left;
+        }
+        table {
+            border-spacing: 5px;
+        }
+    </style>
 </head>
 
 <body>
-    <ul>
+    <h2>Animu List</h2>
+    <table style="width:100%">
+        <tr>
+            <th>Video</th>
+            <th>URL</th>
+            <th>Actions</th>
+        </tr>
         <% data.forEach(function(item) { %>
-            <li><%= item.name %></li>
+            <tr>
+                <th><%= item.name %></th>
+                <th><%= item.url %></th>
+                <th>
+                    <a target="_blank" href="<%= item.url %>">View</a>
+                </th>
+            </tr>
         <% }); %>
-    </ul>
+    </table>
 </body>
 
 </html>

@@ -1,5 +1,6 @@
 var config = require('./config');
 var express = require('express');
+var bootstrap = require('./libs/bootstrap')(config);
 var utils = require('./libs/utils')(config);
 
 // Create server object
@@ -7,7 +8,7 @@ var app = express();
 
 // Bootstrap
 require('./config/express')(app, config);
-require('./config/routes')(app, utils);
+require('./config/routes')(app, bootstrap, utils);
 
 // Start server
 app.listen(config.port, function() {

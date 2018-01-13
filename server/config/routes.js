@@ -1,6 +1,6 @@
-module.exports = function(app, utils) {
+module.exports = function(app, bootstrap, utils) {
 
-    var ctrls = utils.loadControllers();
+    var ctrls = bootstrap.loadControllers(utils);
 
     // Say hello to the world
     app.get('/', function(req, res) {

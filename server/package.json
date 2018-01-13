@@ -1,8 +1,11 @@
 {
   "name": "media-server",
   "version": "1.0.0",
-  "description": "",
+  "description": "sampile media server serve animu",
   "main": "index.js",
+  "repository": {
+    "url": "https://github.com/khanhtc1202/media-server.git"
+  },
   "scripts": {
     "start": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
