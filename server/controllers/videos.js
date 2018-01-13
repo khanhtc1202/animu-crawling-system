@@ -1,5 +1,4 @@
-module.exports = function(utils) {
-    var config = require('../config');
+module.exports = function(config, utils) {
     var fs = require('fs');
     var obj = {};
     

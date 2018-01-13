@@ -7,7 +7,7 @@ module.exports = function(config) {
         var ctrlsPath = config.root + '/controllers';
         fs.readdirSync(ctrlsPath).forEach(function(file) {
             if(file.indexOf('.js') > 0) {
-                ctrls[file.replace('.js','')] = require(ctrlsPath + '/' + file)(utils);
+                ctrls[file.replace('.js','')] = require(ctrlsPath + '/' + file)(config, utils);
                 console.log('Loaded: ' + file.replace('.js','') + ' controller.');
             }
         });

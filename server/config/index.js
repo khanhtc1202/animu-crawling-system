@@ -8,7 +8,8 @@ var config = {
         root: rootPath,
         app: {
             name: 'home-media-server',
-            mediaPath: '/workspace/media-server/media',
+            mediaPath: '/workspace/media-server/media/',
+            mediaDummyPath: '/workspace/media-server/media/nope.mp4',
             mediaBaseUrl: 'http://fromnoobstogeeks.com:7001/'
         },
         port: port
@@ -18,7 +19,8 @@ var config = {
         root: rootPath,
         app: {
             name: 'home-media-server',
-            mediaPath: '/workspace/media-server/media',
+            mediaPath: '/workspace/media-server/media/',
+            mediaDummyPath: '/workspace/media-server/media/nope.mp4',
             mediaBaseUrl: 'http://fromnoobstogeeks.com:7001/'
         },
         port: port
