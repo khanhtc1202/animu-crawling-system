@@ -1,4 +1,4 @@
-import requests, os
+import requests, os, time
 from bs4 import BeautifulSoup
 import config
 import io_func
@@ -41,11 +41,14 @@ def download_media(url):
         logging.warning('URL = '+url)
 
 def main():
-    for rss in get_rss_list():
-        print "Req to:", rss['rss']
-        feeds = get_feeds(rss['rss'])
-        tor_list = [ extract_feed(rss, feed) for feed in feeds ]
-        [ download_media(url) for url in tor_list ]
+    while True:
+        for rss in get_rss_list():
+            print "Req to:", rss['rss']
+            feeds = get_feeds(rss['rss'])
+            tor_list = [ extract_feed(rss, feed) for feed in feeds ]
+            [ download_media(url) for url in tor_list ]
+        print "Going to sleep for 0.5 day time"
+        time.sleep(43200)
 
 if __name__ == '__main__':
     main()
