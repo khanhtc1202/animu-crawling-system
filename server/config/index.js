@@ -9,7 +9,7 @@ var config = {
         app: {
             name: 'home-media-server',
             mediaPath: rootPath + '/../media/',
-            mediaDummyPath: rootPath + '/../media/nope.mp4',
+            mediaDummyPath: rootPath + '/../dummy_files/nope.mp4',
             logPath: rootPath + '/../logs/run.log',
             mediaBaseUrl: 'http://fromnoobstogeeks.com:7001/'
         },
@@ -21,7 +21,7 @@ var config = {
         app: {
             name: 'home-media-server',
             mediaPath: rootPath + '/../media/',
-            mediaDummyPath: rootPath + '/../media/nope.mp4',
+            mediaDummyPath: rootPath + '/../dummy_files/nope.mp4',
             logPath: rootPath + '/../logs/run.log',
             mediaBaseUrl: 'http://fromnoobstogeeks.com:7001/'
         },
