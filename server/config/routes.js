@@ -10,6 +10,7 @@ module.exports = function(app, bootstrap, utils) {
     app.get('/videos', ctrls["videos"].list);
     app.get('/view/video/:name', ctrls["streamer"].showTime);
     app.get('/logs', ctrls['log'].show);
+    app.get('/delete/:name', ctrls['videos'].delete);
 
     // Catch-all
     app.get('*', function(req, res) { res.status(404).json({ error:'Invalid GET request' }) });
