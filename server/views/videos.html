@@ -34,11 +34,16 @@
                 <th><%= item.url %></th>
                 <th>
                     <a target="_blank" href="<%= item.url %>">View</a>
-                    <a target="_blank" href="<%= item.delete %>">Delete</a>
+                    <a target="_blank" href="<%= item.delete %>" onClick="refreshPage()">Delete</a>
                 </th>
             </tr>
         <% }); %>
     </table>
+    <script>
+        function refreshPage() {
+            location.reload();
+        }
+    </script>
 </body>
 
 </html>
