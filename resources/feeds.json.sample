@@ -8,6 +8,11 @@
                 "tag": "a",
                 "css_selector": {"data-key":"quality_720p_torrent"}
             }
+        },
+        {
+            "team": "HorribleSubs",
+            "rss": "https://nyaa.si/?page=rss&u=HorribleSubs",
+            "anchor": false
         }
     ]
 }
