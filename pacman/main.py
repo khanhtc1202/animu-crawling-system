@@ -17,14 +17,17 @@ def download_xml(url):
     
 def get_feeds(rss):
     return download_xml(rss).findAll('item')[:5]
+    
+def write_log(catched_site, msg):
+    logging.warning(msg + '</br>')
+    logging.warning('URL = ' + catched_site + '</br>')
 
 def extract_site_by_anchor(site_url, anchor):
     try:
         soup = download_xml(site_url).find(anchor['tag'], anchor['css_selector'])
         return soup.a['href'] if soup.name != 'a' else soup['href']
     except Exception as error:
-        logging.warning(error)
-        logging.warning('URL = '+site_url)
+        write_log(site_url, error)
         return False
 
 def extract_feed(rss, feed):
@@ -37,8 +40,7 @@ def download_media(url):
         command = script_path + 'download.sh ' + url
         os.system(command)
     except Exception as error:
-        logging.warning(error)
-        logging.warning('URL = '+url)
+        write_log(url, error)
 
 def main():
     while True:
