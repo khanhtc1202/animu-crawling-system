@@ -30,7 +30,7 @@
 
 ## How to run
 
-### Require package
+### Require packages
 
 #### For `pacman` rss listener
 
@@ -49,6 +49,35 @@ To using `npm start` command, pls install `nodemon` package globally to your hos
 #### For `scripts` download videos via torrent
 
 Install `aria2` package via your package manager such as `apt`. More informations go [here](https://aria2.github.io/)
+
+### Add new rss
+
+Rss list stored at `resources/feeds.json`.
+
+Sample config:
+
+```json
+{
+    "title": "FEED LIST",
+    "data": [
+        {
+            "team": "fuyu",
+            "rss": "https://www.fuyufs.com/episode/feed",
+            "anchor": {
+                "tag": "a",
+                "css_selector": {"data-key":"quality_720p_torrent"}
+            }
+        },
+        {
+            "team": "HorribleSubs",
+            "rss": "https://nyaa.si/?page=rss&u=HorribleSubs",
+            "anchor": false
+        }
+    ]
+}
+```
+
+For each rss, if `link` field from `xml` code not contain url for .torrent file, you must specific `anchor` field on rss config to point at tag that have .torrent file download link.
 
 ### Run system
 
