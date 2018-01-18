@@ -1,16 +1,19 @@
 module.exports = function(config, utils) {
     var fs = require('fs');
+    var path = require('path');
     var obj = {};
     
     obj.list = function(req, res, next) {
         var mediaFiles = [];
         fs.readdirSync(config.app.mediaPath).forEach(function(file) {
-            mediaFiles[mediaFiles.length] = {
-                "name": file,
-                "url": utils.createUrl('video', file),
-                "delete": utils.createUrl('delete', file)
-            };
-            console.log("Loaded file " + file + " ready to view!");
+            if (config.app.mediaTypes.indexOf(path.extname(file)) > -1) {
+                mediaFiles[mediaFiles.length] = {
+                    "name": file,
+                    "url": utils.createUrl('video', file),
+                    "delete": utils.createUrl('delete', file)
+                };
+                console.log("Loaded file " + file + " ready to view!");
+            }
         });
         res.render('videos', { 'data': mediaFiles });
     };
