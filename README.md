@@ -1,4 +1,4 @@
-# Animu Crawler System
+# Animu Crawling System
 
 ## System's features
 
