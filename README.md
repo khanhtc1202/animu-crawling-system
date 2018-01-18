@@ -112,3 +112,19 @@ $ node app.js
 $ cd scripts
 $ watch -n 10 "./status.sh"
 ```
+
+### Endpoint list
+
+With `xxx.yyy` is your host
+
+> http://xxx.yyy:3000/
+
+=> Greeting endpoint
+
+> http://xxx.yyy:3000/videos
+
+=> Cloned videos list
+
+> http://xxx.yyy:3000/logs
+
+=> Crawling service log
