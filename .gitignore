@@ -1,5 +1,4 @@
 media/*
-!media/nope.mp4
 node_modules/
 *.pyc
 *.log
