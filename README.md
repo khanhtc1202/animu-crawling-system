@@ -61,7 +61,7 @@ $ cd pacman
 $ python main.py
 ```
 
->  Media Service
+>  Media service
 
 If you installed `nodemon`
 
