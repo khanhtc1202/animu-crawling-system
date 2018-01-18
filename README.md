@@ -1,4 +1,4 @@
-# Sample Media Server
+# Animu Crawler System
 
 ## System's features
 
