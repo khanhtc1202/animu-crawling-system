@@ -54,14 +54,14 @@ Install `aria2` package via your package manager such as `apt`. More information
 
 Run 3 services one by one
 
-> Pacman - RSS listener
+> Pacman service - RSS listener
 
 ```bash
 $ cd pacman
 $ python main.py
 ```
 
->  Media Server
+>  Media Service
 
 If you installed `nodemon`
 
