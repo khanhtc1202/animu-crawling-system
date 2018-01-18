@@ -20,13 +20,13 @@
 └── media
 ```
 
-1. pacman       => rss listener, config rss list on resources/feeds.json
-2. logs         => rss listener's log
-3. resources    => store rss list
-4. scripts      => system's scripts (such as download script)
-5. server       => media server
-6. media        => store videos
-7. dummy_files  => store *
+1. `pacman`       => rss listener, config rss list on resources/feeds.json
+2. `logs`         => rss listener's log
+3. `resources`    => store rss list
+4. `scripts`      => system's scripts (such as download script)
+5. `server`       => media server
+6. `media`        => store videos
+7. `dummy_files`  => store *
 
 ## How to run
 
