@@ -44,7 +44,7 @@ This service performed by python using libs:
 
 This service performed by node js. Just run `npm install` on the first time run this project for installing dependencies packages.
 
-To using `npm start` command, pls install `nodemon` package globally to your host.
+For using `npm start` command, please install `nodemon` package globally to your host.
 
 #### For `scripts` download videos via torrent
 
