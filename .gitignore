@@ -3,4 +3,3 @@ media/*
 node_modules/
 *.pyc
 *.log
-logs/
