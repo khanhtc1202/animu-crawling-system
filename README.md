@@ -34,11 +34,13 @@
 
 #### For `pacman` rss listener
 
-This service performed by python using libs:
+This service performed by python2.7 using libs:
 
 1. requests (install via `pip`)
 2. python-bs4 (install via package manger, such as `apt`)
 3. logging (install via `pip`)
+
+Install python libs via old version of `pip` may harm security problems. Please update your `pip` to newest version to avoid that kind of errors.
 
 #### For `server` media
 
