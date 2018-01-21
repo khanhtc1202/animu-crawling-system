@@ -25,13 +25,15 @@
     <table style="width:100%">
         <tr>
             <th>Videos</th>
-            <th>URLs</th>
+            <th>Size</th>
+            <th>Created At</th>
             <th>Actions</th>
         </tr>
         <% data.forEach(function(item) { %>
             <tr>
                 <th><%= item.name %></th>
-                <th><%= item.url %></th>
+                <th><%= item.size %></th>
+                <th><%= item.created_at %></th>
                 <th>
                     <a target="_blank" href="<%= item.url %>">View</a>
                     <a target="_blank" href="<%= item.delete %>" onClick="refreshPage()">Delete</a>

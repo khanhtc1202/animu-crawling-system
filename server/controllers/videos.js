@@ -7,9 +7,11 @@ module.exports = function(config, utils) {
         var mediaFiles = [];
         fs.readdirSync(config.app.mediaPath).forEach(function(file) {
             if (config.app.mediaTypes.indexOf(path.extname(file)) > -1) {
+                var fileInfo = utils.getMediaInfo(file);
                 mediaFiles[mediaFiles.length] = {
                     "name": file,
-                    "url": utils.createUrl('video', file),
+                    "size": (fileInfo.size / 1048576).toFixed(3) + " MB",
+                    "created_at": fileInfo.birthtime,
                     "delete": utils.createUrl('delete', file)
                 };
                 console.log("Loaded file " + file + " ready to view!");

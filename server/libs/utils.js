@@ -1,4 +1,5 @@
 module.exports = function(config) {
+    var fs = require('fs');
     var obj = {};
     
     obj.createUrl = function(type, resource_name) {
@@ -11,6 +12,10 @@ module.exports = function(config) {
             default:
                 return baseUrl;
         }
+    };
+    
+    obj.getMediaInfo = function(fileName) {
+        return fs.statSync(config.app.mediaPath + fileName);
     };
 
     return obj;
