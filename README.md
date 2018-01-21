@@ -46,7 +46,7 @@ Install python libs via old version of `pip` may harm security problems. Please 
 
 This service performed by node js. Just run `npm install` on the first time run this project for installing dependencies packages.
 
-For using `npm start` command, please install `nodemon` package globally to your host.
+For using `npm start` command, please install [nodemon](https://www.npmjs.com/package/nodemon) package globally to your host.
 
 #### For `scripts` download videos via torrent
 
