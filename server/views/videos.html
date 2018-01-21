@@ -24,6 +24,7 @@
     <h2>Animu List</h2>
     <table style="width:100%">
         <tr>
+            <th>#</th>
             <th>Videos</th>
             <th>Size</th>
             <th>Created At</th>
@@ -31,6 +32,7 @@
         </tr>
         <% data.forEach(function(item) { %>
             <tr>
+                <th><%= item.index %></th>
                 <th><%= item.name %></th>
                 <th><%= item.size %></th>
                 <th><%= item.created_at %></th>

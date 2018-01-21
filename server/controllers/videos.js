@@ -9,6 +9,7 @@ module.exports = function(config, utils) {
             if (config.app.mediaTypes.indexOf(path.extname(file)) > -1) {
                 var fileInfo = utils.getMediaInfo(file);
                 mediaFiles[mediaFiles.length] = {
+                    "index": mediaFiles.length + 1,
                     "name": file,
                     "size": (fileInfo.size / 1048576).toFixed(3) + " MB",
                     "created_at": fileInfo.birthtime,
