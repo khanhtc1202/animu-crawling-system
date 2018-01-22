@@ -13,6 +13,7 @@ module.exports = function(config, utils) {
                     "name": file,
                     "size": (fileInfo.size / 1048576).toFixed(3) + " MB",
                     "created_at": fileInfo.birthtime,
+                    "url": utils.createUrl('video', file),
                     "delete": utils.createUrl('delete', file)
                 };
                 console.log("Loaded file " + file + " ready to view!");
