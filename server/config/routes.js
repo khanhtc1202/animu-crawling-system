@@ -10,6 +10,7 @@ module.exports = function(app, bootstrap, utils) {
     app.get('/videos', ctrls["videos"].list);
     app.get('/view/video/:name', ctrls["streamer"].showTime);
     app.get('/logs', ctrls['log'].show);
+    app.get('/monitor', ctrls['monitor'].show);
     app.get('/delete/:name', ctrls['videos'].delete);
 
     // Catch-all

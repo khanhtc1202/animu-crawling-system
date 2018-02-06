@@ -11,6 +11,7 @@ var config = {
             mediaPath: rootPath + '/../media/',
             mediaDummyPath: rootPath + '/../dummy_files/nope.mp4',
             logPath: rootPath + '/../logs/run.log',
+            scriptPath: rootPath + '/../scripts/',
             mediaBaseUrl: 'http://fromnoobstogeeks.com:7001/',
             mediaTypes: ['.mp4', '.mkv']
         },
@@ -24,6 +25,7 @@ var config = {
             mediaPath: rootPath + '/../media/',
             mediaDummyPath: rootPath + '/../dummy_files/nope.mp4',
             logPath: rootPath + '/../logs/run.log',
+            scriptPath: rootPath + '/../scripts/',
             mediaBaseUrl: 'http://fromnoobstogeeks.com:7001/',
             mediaTypes: ['.mp4', '.mkv']
         },
