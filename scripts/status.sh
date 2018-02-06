@@ -18,7 +18,7 @@ echo "----------------------------------------"
 echo "Time:"
 
 hour=$(date +%H)
-StartDate=$(date -u -d "$NOW" +"%s")
+StartDate=$(date -u -d "$(date +%H:%M:%S)" +"%s")
 FinalDate_1=$(date -u -d "05:22:15" +"%s")
 FinalDate_2=$(date -u -d "17:22:15" +"%s")
 if [ "$hour" -gt 17 ]
