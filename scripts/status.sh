@@ -15,7 +15,7 @@ df -h | grep none
 
 echo "----------------------------------------"
 
-echo "Time:" $(date)
+echo "Time:" $(date '+%Y/%m/%d---%H:%M:%S')
 
 hour=$(date +%H)
 StartDate=$(date -u -d "$(date +%H:%M:%S)" +"%s")
