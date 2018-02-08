@@ -10,7 +10,7 @@ module.exports = function(config, utils) {
             res.status(200).send(error);
             return;
           }
-          res.status(200).send(stdout.replace(/([0-9.])+ /g, '').replace(/\n/g, '</br></br>'));
+          res.status(200).send(stdout.replace(/\n/g, '</br></br>'));
         });
     };
     

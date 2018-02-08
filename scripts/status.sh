@@ -7,11 +7,16 @@
 
 echo "--------- Process Status ---------"
 
-ps aux | grep -E "[n]odemon|[p]ython|[a]ria2"
+ps -x -o pcpu,stat,cmd | grep -E "[n]odemon|[p]ython|[a]ria2"
 
 echo "------- Hard Disk Capacity -------"
 
-df -h | grep none
+df -h | grep Filesystem -A 1
+
+echo "----- Last downloaded status -----"
+
+dwFiles=$(find ../media/* -ctime -0.5 | wc -l)
+echo "Downloaded $dwFiles file(s) in the last time crawling service run"
 
 echo "----------------------------------------"
 
