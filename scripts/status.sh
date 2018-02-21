@@ -20,7 +20,7 @@ echo "Downloaded $dwFiles file(s) in the last time crawling service run"
 
 echo "----------------------------------------"
 
-echo "Time:" $(date '+%Y/%m/%d---%H:%M:%S')
+echo "Time:" $(date)
 
 hour=$(date +%H)
 StartDate=$(date -u -d "$(date +%H:%M:%S)" +"%s")
