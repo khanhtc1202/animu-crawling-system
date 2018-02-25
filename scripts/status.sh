@@ -24,8 +24,8 @@ echo "Time:" $(date)
 
 hour=$(date +%H)
 StartDate=$(date -u -d "$(date +%H:%M:%S)" +"%s")
-FinalDate_1=$(date -u -d "06:04:28" +"%s")
-FinalDate_2=$(date -u -d "18:04:28" +"%s")
+FinalDate_1=$(date -u -d "02:09:14" +"%s")
+FinalDate_2=$(date -u -d "14:09:14" +"%s")
 if [ "$hour" -gt 17 ]
     then echo "Time to the next running turn of crawling process is $(date -u -d "0 $FinalDate_1 sec - $StartDate sec" +"%H:%M:%S")"
 elif [ "$hour" -lt 5 ]
