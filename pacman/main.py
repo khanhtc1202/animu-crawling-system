@@ -19,7 +19,7 @@ def get_feeds(rss):
     return download_xml(rss).findAll('item')[:5]
     
 def write_log(catched_site, msg):
-    logging.warning(msg + '</br>')
+    logging.warning(str(msg) + '</br>')
     logging.warning('URL = ' + catched_site + '</br>')
 
 def extract_site_by_anchor(site_url, anchor):
