@@ -16,7 +16,7 @@ df -h | grep Filesystem -A 1
 echo "----- Last downloaded status -----"
 
 dwFiles=$(find ../media/* -ctime -0.5 | grep -E "mp4|mkv" | wc -l)
-echo "Downloaded $dwFiles file(s) in the last time crawling service run"
+echo "Downloaded $dwFiles file(s) in the last time crawling process ran"
 
 echo "----------------------------------------"
 
