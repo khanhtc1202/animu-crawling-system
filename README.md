@@ -133,4 +133,4 @@ With `xxx.yyy` is your host
 
 > http://xxx.yyy:3000/monitor
 
-=> Crawling system status (for checking hard disk capacity)
+=> Crawling system status (for checking hard disk capacity, system status, etc)
